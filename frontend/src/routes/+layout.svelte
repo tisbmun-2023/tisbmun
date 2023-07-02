@@ -12,7 +12,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>TISBMUN 2023 Team. Made by <a href="https://github.com/cheesycod">cheesycod</a>!</p>
 	</footer>
 </div>
 
