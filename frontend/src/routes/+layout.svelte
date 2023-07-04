@@ -1,28 +1,26 @@
 <script>
-	import "../app.postcss";
+	import Link from "$lib/components/Link.svelte";
+import "../app.postcss";
     import Header from './Header.svelte';
-    import './styles.css';
 </script>
 
-<div class="app">
+<div class="flex flex-col h-screen justify-between bg-gradient-to-b from-blue-900 to-blue-700 text-white">
 	<Header></Header>
 
 	<main>
 		<slot></slot>
 	</main>
 
-	<footer>
-		<p>TISBMUN 2023 Team. Made by <a href="https://github.com/cheesycod">cheesycod</a>!</p>
+	<footer class="mb-auto">
+		<p>TISBMUN 2023 Team. Made by 
+			<Link href="https://github.com/cheesycod">
+				<strong>cheesycod</strong>!
+			</Link>
+		</p>
 	</footer>
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
 	main {
 		flex: 1;
 		display: flex;
@@ -40,10 +38,6 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
 	}
 
 	@media (min-width: 480px) {
