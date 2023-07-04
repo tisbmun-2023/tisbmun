@@ -4,7 +4,7 @@ import "../app.postcss";
     import Header from './Header.svelte';
 </script>
 
-<div class="flex flex-col h-screen justify-between bg-gradient-to-b from-blue-900 to-blue-700 text-white">
+<div class="flex flex-col h-screen justify-between bg-gradient-to-b from-blue-900 to-blue-700 text-white overflow-hidden">
 	<Header></Header>
 
 	<main>
