@@ -1,8 +1,16 @@
 <script>
-	import Link from "$lib/components/Link.svelte";
+	import Footer from "$lib/components/Footer.svelte";
 	import "../app.postcss";
+	import "$lib/css/vars.css"
+	import "$lib/css/fonts.css"
     import Header from '../lib/components/Header.svelte';
 </script>
+
+<svelte:head>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Playfair%20Display&display=swap");
+    </style>
+</svelte:head>
 
 <div class="flex flex-col h-screen justify-between bg-gradient-to-b from-blue-900 to-blue-700 text-white overflow-hidden">
 	<Header></Header>
@@ -12,11 +20,7 @@
 	</main>
 
 	<footer class="mb-auto">
-		<p>TISBMUN 2023 Team. Made by 
-			<Link href="https://github.com/cheesycod">
-				<strong>cheesycod</strong>!
-			</Link>
-		</p>
+		<Footer />
 	</footer>
 </div>
 
