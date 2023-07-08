@@ -4,7 +4,7 @@
 	import tisb from '$lib/images/tisb.png';
 </script>
 
-<header class="h-10 my-10 text-center text-2xl">
+<header class="h-10 p-2 text-xl">
 	<div class="max-w-7xl mx-auto flex items-center justify-between">
 		<div class="flex items-center space-x-6">
 			<a href="/" class="flex items-center">
