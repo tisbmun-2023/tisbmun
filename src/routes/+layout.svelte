@@ -12,14 +12,14 @@
     </style>
 </svelte:head>
 
-<div class="flex flex-col h-screen justify-between bg-gradient-to-b from-violet-900 via-blue-700 to-blue-400 text-white overflow-x-hidden">
+<div class="flex flex-col h-screen bg-gradient-to-b from-violet-900 via-blue-700 to-blue-400 text-white overflow-x-hidden">
 	<Header></Header>
 
-	<main>
+	<main class="">
 		<slot></slot>
 	</main>
 
-	<footer class="mb-auto bg-gradient-to-b from-stone-950 to-stone-800">
+	<footer class="items-center bg-gradient-to-b from-stone-950 to-stone-800">
 		<Footer />
 	</footer>
 </div>
