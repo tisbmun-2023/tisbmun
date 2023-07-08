@@ -15,7 +15,7 @@
 				<ul class="hidden lg:flex items-center space-x-4">
 					{#each nav as navItem}
 						<li class="nav-item" aria-current={navItem.isOnPage($page.url.pathname) ? 'page' : undefined}>
-							<a href={navItem?.url}>{navItem?.name}</a>
+							<a class="hover:text-amber-500" href={navItem?.url}>{navItem?.name}</a>
 						</li>
 					{/each}
 				</ul>
@@ -25,7 +25,4 @@
 </header>
 
 <style>
-	.nav-item:hover {
-		color: var(--metallic-gold);
-	}
 </style>
