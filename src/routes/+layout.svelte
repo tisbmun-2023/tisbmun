@@ -15,7 +15,7 @@
 <div class="flex flex-col h-screen bg-gradient-to-b from-violet-900 via-blue-700 to-blue-400 text-white overflow-x-hidden">
 	<Header></Header>
 
-	<main class="">
+	<main>
 		<slot></slot>
 	</main>
 
