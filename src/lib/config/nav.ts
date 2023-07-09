@@ -23,5 +23,11 @@ export const nav: Nav[] = [
         name: "Committees",
         url: "/committees",
         isOnPage: (path: string) => path === '/committees'
+    },
+    {
+        id: "resources",
+        name: "MUN Resources",
+        url: "/resources",
+        isOnPage: (path: string) => path === '/resources'
     }
 ]

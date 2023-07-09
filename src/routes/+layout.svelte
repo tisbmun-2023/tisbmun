@@ -1,23 +1,19 @@
 <script>
 	import Footer from "$lib/components/Footer.svelte";
 	import "../app.postcss";
+	import "$lib/css/img.postcss"
 	import "$lib/css/vars.css"
 	import "$lib/css/fonts.css"
     import Header from '../lib/components/Header.svelte';
 </script>
 
-<svelte:head>
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Playfair%20Display&display=swap");
-    </style>
-</svelte:head>
-
-<div class="flex flex-col h-screen bg-gradient-to-b from-violet-900 via-blue-700 to-blue-400 text-white overflow-x-hidden">
-	<Header></Header>
-
-	<main>
-		<slot></slot>
-	</main>
+<div class="flex flex-col h-screen bg-[#1c335b] text-white overflow-x-hidden">
+	<div id="bg-1">
+		<Header></Header>
+		<main>
+			<slot></slot>
+		</main>
+	</div>
 
 	<footer class="items-center bg-gradient-to-b from-stone-950 to-stone-800">
 		<Footer />

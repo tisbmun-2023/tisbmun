@@ -9,7 +9,7 @@
 		<div class="flex items-center space-x-6">
 			<a href="/" class="flex items-center">
 				<img src={tisb} class="h-6 sm:h-9" alt="TISB Logo" />
-				<span class="self-center text-xl font-semibold whitespace-nowrap text-white">TISBMUN 2023</span>
+				<span class="self-center text-3xl font-semibold whitespace-nowrap text-white">TISBMUN 2023</span>
 			</a>
 			<nav>
 				<ul class="hidden lg:flex items-center space-x-4">
@@ -23,6 +23,3 @@
 		</div>
 	</div>
 </header>
-
-<style>
-</style>
