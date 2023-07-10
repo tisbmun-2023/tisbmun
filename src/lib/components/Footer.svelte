@@ -1,22 +1,17 @@
 <script>
-	import { socialMedia } from "$lib/config/sm";
-	import Icon from "@iconify/svelte";
-	import Link from "./Link.svelte";
+	import { socialMedia } from '$lib/config/sm';
+	import Icon from '@iconify/svelte';
+	import Link from './Link.svelte';
 </script>
 
-<p>TISBMUN 2023 Team. Made by 
-    <Link href="https://github.com/cheesycod">
-        <strong>cheesycod</strong>
-    </Link>
-    and <Link href="https://github.com/SpectreZ7">
-        <strong>Spectre</strong>
-    </Link>!
-</p>    
+<p>
+	TISBMUN 2023
+</p>
 
-<div class="flex items-center space-x-2 relative">
-    {#each socialMedia as sm}
-        <a href={sm?.url} id={sm?.id + "-icon"}>
-            <Icon icon={sm?.icon} inline={true} width={20} />
-        </a>
-    {/each}
+<div class="relative flex items-center space-x-2">
+	{#each socialMedia as sm}
+		<a href={sm?.url} id={sm?.id + '-icon'}>
+			<Icon icon={sm?.icon} inline={true} width={20} />
+		</a>
+	{/each}
 </div>

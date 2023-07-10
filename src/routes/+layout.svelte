@@ -1,20 +1,22 @@
 <script>
-	import Footer from "$lib/components/Footer.svelte";
-	import "../app.postcss";
-	import "$lib/css/img.postcss"
-	import "$lib/css/vars.css"
-	import "$lib/css/fonts.css"
-    import Header from '../lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import '../app.postcss';
+	import '$lib/css/vars.css';
+	import '$lib/css/fonts.css';
+	import Header from '../lib/components/Header.svelte';
 </script>
 
-<div class="flex flex-col h-screen bg-[#1c335b] text-white overflow-x-hidden">
-	<div id="bg-1">
-		<Header></Header>
-		<main>
-			<slot></slot>
-		</main>
-	</div>
+<svelte:head>
+	<style>
+        @import url("https://fonts.googleapis.com/css?family=Lexend%20Deca&display=swap");
+    </style>
+</svelte:head>
 
+<div class="flex min-h-screen flex-col overflow-x-hidden bg-[#1c335b] text-white">
+	<Header />
+	<main>
+		<slot />
+	</main>
 	<footer class="items-center bg-gradient-to-b from-stone-950 to-stone-800">
 		<Footer />
 	</footer>
@@ -25,9 +27,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
-		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
