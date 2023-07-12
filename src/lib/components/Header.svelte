@@ -2,6 +2,16 @@
 	import { page } from '$app/stores';
 	import { nav } from '$lib/config/nav';
 	import tisb from '$lib/images/tisb.png';
+
+    function onClickMenu() {
+      console.log("clicked");
+  
+      const menu = document.getElementById("menu");
+  
+      if (menu) {
+        menu.classList.toggle("hidden");
+      }
+    }
 </script>
 
 <header class="mb-3 h-10 p-2 text-xl">
@@ -26,13 +36,28 @@
 				</ul>
 			</nav>
 		</div>
+		<div class="flex items-center space-x-2 relative">
+			<button on:click={onClickMenu} type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+				<span class="sr-only">Open main menu</span>
+				<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+			</button>		
+
+		</div>
 	</div>
 </header>
+
+<div id="menu" class="hidden bg-yellow-400">
+	<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">  
+		{#each nav as link}
+			<a href={link?.url} class="block px-3 py-2 text-base font-medium text-violet-600 rounded-md hover:text-gray-900 hover:bg-gray-50 dark:text-amber-400 dark:hover:text-white dark:hover:bg-gray-700">{link?.name}</a>
+		{/each}
+		<button on:click={onClickMenu} class="w-full text-left block px-3 py-2 text-base font-medium text-violet-600 rounded-md hover:text-gray-900 hover:bg-gray-50 dark:text-amber-400 dark:hover:text-white dark:hover:bg-gray-700">Close Menu</button>
+	</div>
+</div>	
 
 <style>
 header,
 nav,
-p,
 span,
 div,
 li,
